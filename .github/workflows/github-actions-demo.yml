@@ -7,7 +7,3 @@
         - run: echo "Deploying Screeps code for all files listed in screeps.yml"
         - name: Screeps Deployer
           uses: aphistic/screeps-deployer@v0.1.0
-          action "Deploy to Screeps" {
-            uses = "aphistic/screeps-deployer@master"
-            secrets = ["SCREEPS_TOKEN"]
-          }
