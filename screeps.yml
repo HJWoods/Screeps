@@ -1,0 +1,7 @@
+modules:
+  - name: main
+    file: main.js
+  - name: some.name
+    file: some/name.js
+
+
