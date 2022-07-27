@@ -1,4 +1,6 @@
 import { ErrorMapper } from "utils/ErrorMapper";
+import {Squad} from "./common/SquadManager";
+import {GameState} from "./common/GameState";
 
 declare global {
   /*
@@ -40,4 +42,9 @@ export const loop = ErrorMapper.wrapLoop(() => {
       delete Memory.creeps[name];
     }
   }
+  for(let roomName in Game.rooms) {
+    let room = Game.rooms[roomName];
+    GameState.update(room);
+  }
+  Squad.run();
 });
